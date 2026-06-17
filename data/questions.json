@@ -1,0 +1,504 @@
+{
+  "version": "1.0",
+  "totalQuestions": 9,
+  "description": "転職初心者向けのキャリア状況ヒアリング。診断結果からLINE登録への自然な導線設計。",
+  "questions": [
+    {
+      "id": 1,
+      "sequence": 1,
+      "question": "現在の仕事の状況は、どれに当てはまりますか？",
+      "description": "あなたの現在地を教えてください",
+      "type": "currentSituation",
+      "choices": [
+        {
+          "id": "A",
+          "text": "正社員として働いている",
+          "weight": {
+            "selfDiscovery": 2,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 8,
+            "carefulConsultation": 4,
+            "speedyOffer": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "契約社員・派遣社員・アルバイトをしている",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 7,
+            "secondNewGraduate": 2,
+            "carefulConsultation": 5,
+            "speedyOffer": 8
+          }
+        },
+        {
+          "id": "C",
+          "text": "今は仕事をしていない（フリーター・無職）",
+          "weight": {
+            "selfDiscovery": 8,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 3,
+            "carefulConsultation": 6,
+            "speedyOffer": 9
+          }
+        },
+        {
+          "id": "D",
+          "text": "学生・その他",
+          "weight": {
+            "selfDiscovery": 7,
+            "unexperiencedChallenge": 8,
+            "secondNewGraduate": 1,
+            "carefulConsultation": 5,
+            "speedyOffer": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sequence": 2,
+      "question": "今、転職・就職を考えている理由は？",
+      "description": "複数あれば、最も大きな理由を選んでください",
+      "type": "motivationForChange",
+      "choices": [
+        {
+          "id": "A",
+          "text": "今の職場の人間関係や環境が合わない",
+          "reason": "workplace_environment",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 9,
+            "carefulConsultation": 7,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "B",
+          "text": "給与・待遇・労働条件に不満がある",
+          "reason": "compensation",
+          "weight": {
+            "selfDiscovery": 2,
+            "unexperiencedChallenge": 5,
+            "secondNewGraduate": 8,
+            "carefulConsultation": 5,
+            "speedyOffer": 8
+          }
+        },
+        {
+          "id": "C",
+          "text": "やりがいを感じられず、別の仕事をしたい",
+          "reason": "lack_of_purpose",
+          "weight": {
+            "selfDiscovery": 10,
+            "unexperiencedChallenge": 4,
+            "secondNewGraduate": 6,
+            "carefulConsultation": 6,
+            "speedyOffer": 2
+          }
+        },
+        {
+          "id": "D",
+          "text": "スキル・キャリアアップを目指したい",
+          "reason": "career_growth",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 8,
+            "secondNewGraduate": 5,
+            "carefulConsultation": 4,
+            "speedyOffer": 6
+          }
+        },
+        {
+          "id": "E",
+          "text": "正社員を目指したい（フリーター・既卒向け）",
+          "reason": "seeking_stability",
+          "weight": {
+            "selfDiscovery": 6,
+            "unexperiencedChallenge": 9,
+            "secondNewGraduate": 2,
+            "carefulConsultation": 7,
+            "speedyOffer": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sequence": 3,
+      "question": "転職・就職したい時期は？",
+      "description": "希望のスピード感を教えてください",
+      "type": "urgency",
+      "choices": [
+        {
+          "id": "A",
+          "text": "じっくり3～6ヶ月かけて探したい",
+          "weight": {
+            "selfDiscovery": 8,
+            "unexperiencedChallenge": 2,
+            "secondNewGraduate": 4,
+            "carefulConsultation": 10,
+            "speedyOffer": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "1～3ヶ月程度で決めたい",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 7,
+            "carefulConsultation": 6,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "C",
+          "text": "できるだけ早く（1ヶ月以内）決めたい",
+          "weight": {
+            "selfDiscovery": 2,
+            "unexperiencedChallenge": 9,
+            "secondNewGraduate": 6,
+            "carefulConsultation": 3,
+            "speedyOffer": 10
+          }
+        },
+        {
+          "id": "D",
+          "text": "まだ決めていない、気長に探している",
+          "weight": {
+            "selfDiscovery": 7,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 2,
+            "carefulConsultation": 8,
+            "speedyOffer": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sequence": 4,
+      "question": "正社員としての勤続経験は？",
+      "description": "これまでの職歴について教えてください",
+      "type": "employmentHistory",
+      "choices": [
+        {
+          "id": "A",
+          "text": "正社員経験がない",
+          "weight": {
+            "selfDiscovery": 6,
+            "unexperiencedChallenge": 8,
+            "secondNewGraduate": 1,
+            "carefulConsultation": 8,
+            "speedyOffer": 10
+          }
+        },
+        {
+          "id": "B",
+          "text": "1年未満（新入社員・短期勤務）",
+          "weight": {
+            "selfDiscovery": 4,
+            "unexperiencedChallenge": 7,
+            "secondNewGraduate": 10,
+            "carefulConsultation": 9,
+            "speedyOffer": 7
+          }
+        },
+        {
+          "id": "C",
+          "text": "1～3年（第二新卒層）",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 9,
+            "carefulConsultation": 6,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "D",
+          "text": "3年以上",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 4,
+            "carefulConsultation": 4,
+            "speedyOffer": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "sequence": 5,
+      "question": "やりたい仕事・職種は決まっていますか？",
+      "description": "漠然としたイメージでも大丈夫です",
+      "type": "careerDirection",
+      "choices": [
+        {
+          "id": "A",
+          "text": "やりたい仕事が決まっている",
+          "weight": {
+            "selfDiscovery": 1,
+            "unexperiencedChallenge": 7,
+            "secondNewGraduate": 4,
+            "carefulConsultation": 3,
+            "speedyOffer": 7
+          }
+        },
+        {
+          "id": "B",
+          "text": "大体のイメージはある",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 6,
+            "carefulConsultation": 5,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "C",
+          "text": "いくつか選択肢がある",
+          "weight": {
+            "selfDiscovery": 8,
+            "unexperiencedChallenge": 5,
+            "secondNewGraduate": 5,
+            "carefulConsultation": 7,
+            "speedyOffer": 3
+          }
+        },
+        {
+          "id": "D",
+          "text": "全くわからない（何がしたいかわからない状態）",
+          "weight": {
+            "selfDiscovery": 10,
+            "unexperiencedChallenge": 4,
+            "secondNewGraduate": 3,
+            "carefulConsultation": 8,
+            "speedyOffer": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "sequence": 6,
+      "question": "未経験の職種に挑戦することについて",
+      "description": "今後のキャリアの視野を知りたいです",
+      "type": "careerChange",
+      "choices": [
+        {
+          "id": "A",
+          "text": "積極的に挑戦したい",
+          "weight": {
+            "selfDiscovery": 4,
+            "unexperiencedChallenge": 10,
+            "secondNewGraduate": 5,
+            "carefulConsultation": 3,
+            "speedyOffer": 7
+          }
+        },
+        {
+          "id": "B",
+          "text": "チャンスがあれば考えたい",
+          "weight": {
+            "selfDiscovery": 6,
+            "unexperiencedChallenge": 8,
+            "secondNewGraduate": 6,
+            "carefulConsultation": 6,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "C",
+          "text": "できれば経験を活かしたい（関連職種）",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 7,
+            "carefulConsultation": 7,
+            "speedyOffer": 2
+          }
+        },
+        {
+          "id": "D",
+          "text": "今の経験・スキルが活かせる仕事がいい",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 2,
+            "secondNewGraduate": 4,
+            "carefulConsultation": 5,
+            "speedyOffer": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sequence": 7,
+      "question": "書類作成や面接について、どの程度不安ですか？",
+      "description": "ご自身の気持ちに正直に選んでください",
+      "type": "selectionProcessAnxiety",
+      "choices": [
+        {
+          "id": "A",
+          "text": "かなり不安。やり方からサポートが必要",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 5,
+            "secondNewGraduate": 9,
+            "carefulConsultation": 10,
+            "speedyOffer": 4
+          }
+        },
+        {
+          "id": "B",
+          "text": "少し不安。アドバイスがあると助かる",
+          "weight": {
+            "selfDiscovery": 4,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 7,
+            "carefulConsultation": 8,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "C",
+          "text": "大丈夫。自分でなんとかなると思う",
+          "weight": {
+            "selfDiscovery": 6,
+            "unexperiencedChallenge": 4,
+            "secondNewGraduate": 3,
+            "carefulConsultation": 2,
+            "speedyOffer": 6
+          }
+        },
+        {
+          "id": "D",
+          "text": "経験者なので特に不安はない",
+          "weight": {
+            "selfDiscovery": 2,
+            "unexperiencedChallenge": 2,
+            "secondNewGraduate": 2,
+            "carefulConsultation": 2,
+            "speedyOffer": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "sequence": 8,
+      "question": "転職・就職活動を一人で進めることについて",
+      "description": "正直な気持ちを選んでください",
+      "type": "independenceAnxiety",
+      "choices": [
+        {
+          "id": "A",
+          "text": "一人で進めるのは不安。サポートがほしい",
+          "weight": {
+            "selfDiscovery": 7,
+            "unexperiencedChallenge": 7,
+            "secondNewGraduate": 9,
+            "carefulConsultation": 10,
+            "speedyOffer": 6
+          }
+        },
+        {
+          "id": "B",
+          "text": "困った時に相談できる人がいると心強い",
+          "weight": {
+            "selfDiscovery": 6,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 7,
+            "carefulConsultation": 8,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "C",
+          "text": "基本的には自分で進めたいが、アドバイスは欲しい",
+          "weight": {
+            "selfDiscovery": 5,
+            "unexperiencedChallenge": 5,
+            "secondNewGraduate": 5,
+            "carefulConsultation": 5,
+            "speedyOffer": 5
+          }
+        },
+        {
+          "id": "D",
+          "text": "できるだけ一人で進めたい",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 3,
+            "secondNewGraduate": 2,
+            "carefulConsultation": 2,
+            "speedyOffer": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sequence": 9,
+      "question": "LINE登録で提供できたら嬉しいことは？",
+      "description": "あなたが最も欲しい情報やサポートを選んでください",
+      "type": "lineValue",
+      "choices": [
+        {
+          "id": "A",
+          "text": "自分の適性や強みをもっと深く知る個別診断",
+          "value": "deep_self_assessment",
+          "weight": {
+            "selfDiscovery": 10,
+            "unexperiencedChallenge": 4,
+            "secondNewGraduate": 5,
+            "carefulConsultation": 6,
+            "speedyOffer": 2
+          }
+        },
+        {
+          "id": "B",
+          "text": "自分に合う求人情報や業界の話題",
+          "value": "personalized_opportunities",
+          "weight": {
+            "selfDiscovery": 2,
+            "unexperiencedChallenge": 9,
+            "secondNewGraduate": 6,
+            "carefulConsultation": 3,
+            "speedyOffer": 10
+          }
+        },
+        {
+          "id": "C",
+          "text": "書類作成や面接対策の具体的なやり方",
+          "value": "practical_support",
+          "weight": {
+            "selfDiscovery": 3,
+            "unexperiencedChallenge": 6,
+            "secondNewGraduate": 9,
+            "carefulConsultation": 10,
+            "speedyOffer": 6
+          }
+        },
+        {
+          "id": "D",
+          "text": "転職のプロに直接相談できる機会",
+          "value": "expert_consultation",
+          "weight": {
+            "selfDiscovery": 8,
+            "unexperiencedChallenge": 7,
+            "secondNewGraduate": 8,
+            "carefulConsultation": 10,
+            "speedyOffer": 7
+          }
+        }
+      ]
+    }
+  ]
+}
